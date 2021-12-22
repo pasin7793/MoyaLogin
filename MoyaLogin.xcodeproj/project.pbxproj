@@ -7,15 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1987EB2B36EE084878E65FE1 /* Pods_MoyaLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F4DBE0FCCCEF2E999BD0DF0 /* Pods_MoyaLogin.framework */; };
+		1CE6A41CD43342D25021DBEF /* Pods_MoyaLoginTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60037E6C183335F7AD6FA0C8 /* Pods_MoyaLoginTests.framework */; };
+		5114FB980213F4BE4DA6D087 /* Pods_MoyaLogin_MoyaLoginUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30DCA2A57C7E8F7BD73C2F3E /* Pods_MoyaLogin_MoyaLoginUITests.framework */; };
 		94EE98F02771E858009A568A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE98EF2771E858009A568A /* AppDelegate.swift */; };
 		94EE98F22771E858009A568A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE98F12771E858009A568A /* SceneDelegate.swift */; };
-		94EE98F42771E858009A568A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE98F32771E858009A568A /* ViewController.swift */; };
-		94EE98F72771E858009A568A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94EE98F52771E858009A568A /* Main.storyboard */; };
 		94EE98F92771E859009A568A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94EE98F82771E859009A568A /* Assets.xcassets */; };
 		94EE98FC2771E859009A568A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94EE98FA2771E859009A568A /* LaunchScreen.storyboard */; };
 		94EE99072771E859009A568A /* MoyaLoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE99062771E859009A568A /* MoyaLoginTests.swift */; };
 		94EE99112771E859009A568A /* MoyaLoginUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE99102771E859009A568A /* MoyaLoginUITests.swift */; };
 		94EE99132771E859009A568A /* MoyaLoginUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE99122771E859009A568A /* MoyaLoginUITestsLaunchTests.swift */; };
+		94EE99262771F832009A568A /* LoginAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE99252771F832009A568A /* LoginAPI.swift */; };
+		94EE992927721272009A568A /* SignupRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE992827721272009A568A /* SignupRequest.swift */; };
+		94EE992B2772A4F8009A568A /* SingupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE992A2772A4F8009A568A /* SingupModel.swift */; };
+		94EE992F2772A7BC009A568A /* SinginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE992E2772A7BC009A568A /* SinginRequest.swift */; };
+		94EE99312772A7E4009A568A /* SinginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE99302772A7E4009A568A /* SinginModel.swift */; };
+		94EE99332772A8C8009A568A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE99322772A8C8009A568A /* NetworkManager.swift */; };
+		94EE99362772B70F009A568A /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE99352772B70F009A568A /* loginViewController.swift */; };
+		94EE993B2772B92A009A568A /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE993A2772B92A009A568A /* ViewModel.swift */; };
+		94EE994127734119009A568A /* LoginFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE994027734119009A568A /* LoginFlow.swift */; };
+		94EE9943277343D6009A568A /* AppFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE9942277343D6009A568A /* AppFlow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,11 +47,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		28B82D3A339A82D3B87712B5 /* Pods-MoyaLoginTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyaLoginTests.debug.xcconfig"; path = "Target Support Files/Pods-MoyaLoginTests/Pods-MoyaLoginTests.debug.xcconfig"; sourceTree = "<group>"; };
+		30DCA2A57C7E8F7BD73C2F3E /* Pods_MoyaLogin_MoyaLoginUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoyaLogin_MoyaLoginUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		60037E6C183335F7AD6FA0C8 /* Pods_MoyaLoginTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoyaLoginTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F4DBE0FCCCEF2E999BD0DF0 /* Pods_MoyaLogin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoyaLogin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8051596CE3C420BBC01CAF99 /* Pods-MoyaLogin-MoyaLoginUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyaLogin-MoyaLoginUITests.debug.xcconfig"; path = "Target Support Files/Pods-MoyaLogin-MoyaLoginUITests/Pods-MoyaLogin-MoyaLoginUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8245AAAEC0EE31BA52B89BA8 /* Pods-MoyaLoginTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyaLoginTests.release.xcconfig"; path = "Target Support Files/Pods-MoyaLoginTests/Pods-MoyaLoginTests.release.xcconfig"; sourceTree = "<group>"; };
 		94EE98EC2771E858009A568A /* MoyaLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoyaLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94EE98EF2771E858009A568A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94EE98F12771E858009A568A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		94EE98F32771E858009A568A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		94EE98F62771E858009A568A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		94EE98F82771E859009A568A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		94EE98FB2771E859009A568A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		94EE98FD2771E859009A568A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +64,19 @@
 		94EE990C2771E859009A568A /* MoyaLoginUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoyaLoginUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94EE99102771E859009A568A /* MoyaLoginUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaLoginUITests.swift; sourceTree = "<group>"; };
 		94EE99122771E859009A568A /* MoyaLoginUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaLoginUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		94EE99252771F832009A568A /* LoginAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAPI.swift; sourceTree = "<group>"; };
+		94EE992827721272009A568A /* SignupRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupRequest.swift; sourceTree = "<group>"; };
+		94EE992A2772A4F8009A568A /* SingupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingupModel.swift; sourceTree = "<group>"; };
+		94EE992E2772A7BC009A568A /* SinginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinginRequest.swift; sourceTree = "<group>"; };
+		94EE99302772A7E4009A568A /* SinginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinginModel.swift; sourceTree = "<group>"; };
+		94EE99322772A8C8009A568A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		94EE99352772B70F009A568A /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
+		94EE993A2772B92A009A568A /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		94EE994027734119009A568A /* LoginFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFlow.swift; sourceTree = "<group>"; };
+		94EE9942277343D6009A568A /* AppFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlow.swift; sourceTree = "<group>"; };
+		975B3C2D7AEB5D5F67897C52 /* Pods-MoyaLogin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyaLogin.release.xcconfig"; path = "Target Support Files/Pods-MoyaLogin/Pods-MoyaLogin.release.xcconfig"; sourceTree = "<group>"; };
+		B99A19C8193E42C30AC751D1 /* Pods-MoyaLogin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyaLogin.debug.xcconfig"; path = "Target Support Files/Pods-MoyaLogin/Pods-MoyaLogin.debug.xcconfig"; sourceTree = "<group>"; };
+		BCCFC39FC79C5879DE336894 /* Pods-MoyaLogin-MoyaLoginUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyaLogin-MoyaLoginUITests.release.xcconfig"; path = "Target Support Files/Pods-MoyaLogin-MoyaLoginUITests/Pods-MoyaLogin-MoyaLoginUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1987EB2B36EE084878E65FE1 /* Pods_MoyaLogin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CE6A41CD43342D25021DBEF /* Pods_MoyaLoginTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +100,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5114FB980213F4BE4DA6D087 /* Pods_MoyaLogin_MoyaLoginUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4049FDA325598607CBBD4827 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6F4DBE0FCCCEF2E999BD0DF0 /* Pods_MoyaLogin.framework */,
+				30DCA2A57C7E8F7BD73C2F3E /* Pods_MoyaLogin_MoyaLoginUITests.framework */,
+				60037E6C183335F7AD6FA0C8 /* Pods_MoyaLoginTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		904B079B6CF42DE60748665B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B99A19C8193E42C30AC751D1 /* Pods-MoyaLogin.debug.xcconfig */,
+				975B3C2D7AEB5D5F67897C52 /* Pods-MoyaLogin.release.xcconfig */,
+				8051596CE3C420BBC01CAF99 /* Pods-MoyaLogin-MoyaLoginUITests.debug.xcconfig */,
+				BCCFC39FC79C5879DE336894 /* Pods-MoyaLogin-MoyaLoginUITests.release.xcconfig */,
+				28B82D3A339A82D3B87712B5 /* Pods-MoyaLoginTests.debug.xcconfig */,
+				8245AAAEC0EE31BA52B89BA8 /* Pods-MoyaLoginTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		94EE98E32771E858009A568A = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +137,8 @@
 				94EE99052771E859009A568A /* MoyaLoginTests */,
 				94EE990F2771E859009A568A /* MoyaLoginUITests */,
 				94EE98ED2771E858009A568A /* Products */,
+				904B079B6CF42DE60748665B /* Pods */,
+				4049FDA325598607CBBD4827 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,10 +155,12 @@
 		94EE98EE2771E858009A568A /* MoyaLogin */ = {
 			isa = PBXGroup;
 			children = (
-				94EE98EF2771E858009A568A /* AppDelegate.swift */,
-				94EE98F12771E858009A568A /* SceneDelegate.swift */,
-				94EE98F32771E858009A568A /* ViewController.swift */,
-				94EE98F52771E858009A568A /* Main.storyboard */,
+				94EE993C27734018009A568A /* Flows */,
+				94EE99342772B6F7009A568A /* Main */,
+				94EE992727721219009A568A /* Model */,
+				94EE99392772B91B009A568A /* ViewModel */,
+				94EE99202771EDBD009A568A /* Network */,
+				94EE991F2771E882009A568A /* App */,
 				94EE98F82771E859009A568A /* Assets.xcassets */,
 				94EE98FA2771E859009A568A /* LaunchScreen.storyboard */,
 				94EE98FD2771E859009A568A /* Info.plist */,
@@ -127,6 +185,100 @@
 			path = MoyaLoginUITests;
 			sourceTree = "<group>";
 		};
+		94EE991F2771E882009A568A /* App */ = {
+			isa = PBXGroup;
+			children = (
+				94EE98EF2771E858009A568A /* AppDelegate.swift */,
+				94EE98F12771E858009A568A /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		94EE99202771EDBD009A568A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				94EE99252771F832009A568A /* LoginAPI.swift */,
+				94EE99322772A8C8009A568A /* NetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		94EE992727721219009A568A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				94EE992D2772A7A6009A568A /* Singin */,
+				94EE992C2772A797009A568A /* Singup */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		94EE992C2772A797009A568A /* Singup */ = {
+			isa = PBXGroup;
+			children = (
+				94EE992827721272009A568A /* SignupRequest.swift */,
+				94EE992A2772A4F8009A568A /* SingupModel.swift */,
+			);
+			path = Singup;
+			sourceTree = "<group>";
+		};
+		94EE992D2772A7A6009A568A /* Singin */ = {
+			isa = PBXGroup;
+			children = (
+				94EE992E2772A7BC009A568A /* SinginRequest.swift */,
+				94EE99302772A7E4009A568A /* SinginModel.swift */,
+			);
+			path = Singin;
+			sourceTree = "<group>";
+		};
+		94EE99342772B6F7009A568A /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				94EE99352772B70F009A568A /* loginViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		94EE99392772B91B009A568A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				94EE993A2772B92A009A568A /* ViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		94EE993C27734018009A568A /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				94EE993D27734020009A568A /* Flows */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		94EE993D27734020009A568A /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				94EE9942277343D6009A568A /* AppFlow.swift */,
+				94EE993F2773410B009A568A /* Login */,
+				94EE993E27734037009A568A /* Steps */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		94EE993E27734037009A568A /* Steps */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Steps;
+			sourceTree = "<group>";
+		};
+		94EE993F2773410B009A568A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				94EE994027734119009A568A /* LoginFlow.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +286,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 94EE99162771E859009A568A /* Build configuration list for PBXNativeTarget "MoyaLogin" */;
 			buildPhases = (
+				C4428ECD17B1A5E7C37935D7 /* [CP] Check Pods Manifest.lock */,
 				94EE98E82771E858009A568A /* Sources */,
 				94EE98E92771E858009A568A /* Frameworks */,
 				94EE98EA2771E858009A568A /* Resources */,
+				3C3C29DBAE4DE5CDE70AC4B8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,6 +305,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 94EE99192771E859009A568A /* Build configuration list for PBXNativeTarget "MoyaLoginTests" */;
 			buildPhases = (
+				5D1EEC72E4D029B649555B4B /* [CP] Check Pods Manifest.lock */,
 				94EE98FE2771E859009A568A /* Sources */,
 				94EE98FF2771E859009A568A /* Frameworks */,
 				94EE99002771E859009A568A /* Resources */,
@@ -169,9 +324,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 94EE991C2771E859009A568A /* Build configuration list for PBXNativeTarget "MoyaLoginUITests" */;
 			buildPhases = (
+				513930C438665D9FFE5AB319 /* [CP] Check Pods Manifest.lock */,
 				94EE99082771E859009A568A /* Sources */,
 				94EE99092771E859009A568A /* Frameworks */,
 				94EE990A2771E859009A568A /* Resources */,
+				1EB251F2230F871E0C4D3DAB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -233,7 +390,6 @@
 			files = (
 				94EE98FC2771E859009A568A /* LaunchScreen.storyboard in Resources */,
 				94EE98F92771E859009A568A /* Assets.xcassets in Resources */,
-				94EE98F72771E858009A568A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,14 +409,126 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1EB251F2230F871E0C4D3DAB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MoyaLogin-MoyaLoginUITests/Pods-MoyaLogin-MoyaLoginUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MoyaLogin-MoyaLoginUITests/Pods-MoyaLogin-MoyaLoginUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MoyaLogin-MoyaLoginUITests/Pods-MoyaLogin-MoyaLoginUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3C3C29DBAE4DE5CDE70AC4B8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MoyaLogin/Pods-MoyaLogin-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MoyaLogin/Pods-MoyaLogin-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MoyaLogin/Pods-MoyaLogin-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		513930C438665D9FFE5AB319 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MoyaLogin-MoyaLoginUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5D1EEC72E4D029B649555B4B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MoyaLoginTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C4428ECD17B1A5E7C37935D7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MoyaLogin-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		94EE98E82771E858009A568A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94EE98F42771E858009A568A /* ViewController.swift in Sources */,
+				94EE993B2772B92A009A568A /* ViewModel.swift in Sources */,
+				94EE9943277343D6009A568A /* AppFlow.swift in Sources */,
 				94EE98F02771E858009A568A /* AppDelegate.swift in Sources */,
+				94EE992927721272009A568A /* SignupRequest.swift in Sources */,
+				94EE99312772A7E4009A568A /* SinginModel.swift in Sources */,
+				94EE99262771F832009A568A /* LoginAPI.swift in Sources */,
+				94EE994127734119009A568A /* LoginFlow.swift in Sources */,
+				94EE99332772A8C8009A568A /* NetworkManager.swift in Sources */,
 				94EE98F22771E858009A568A /* SceneDelegate.swift in Sources */,
+				94EE992B2772A4F8009A568A /* SingupModel.swift in Sources */,
+				94EE992F2772A7BC009A568A /* SinginRequest.swift in Sources */,
+				94EE99362772B70F009A568A /* loginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +565,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		94EE98F52771E858009A568A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				94EE98F62771E858009A568A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		94EE98FA2771E859009A568A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -434,6 +694,7 @@
 		};
 		94EE99172771E859009A568A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B99A19C8193E42C30AC751D1 /* Pods-MoyaLogin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -443,7 +704,6 @@
 				INFOPLIST_FILE = MoyaLogin/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -461,6 +721,7 @@
 		};
 		94EE99182771E859009A568A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 975B3C2D7AEB5D5F67897C52 /* Pods-MoyaLogin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -470,7 +731,6 @@
 				INFOPLIST_FILE = MoyaLogin/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -488,6 +748,7 @@
 		};
 		94EE991A2771E859009A568A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28B82D3A339A82D3B87712B5 /* Pods-MoyaLoginTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -507,6 +768,7 @@
 		};
 		94EE991B2771E859009A568A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8245AAAEC0EE31BA52B89BA8 /* Pods-MoyaLoginTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -526,6 +788,7 @@
 		};
 		94EE991D2771E859009A568A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8051596CE3C420BBC01CAF99 /* Pods-MoyaLogin-MoyaLoginUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -543,6 +806,7 @@
 		};
 		94EE991E2771E859009A568A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCCFC39FC79C5879DE336894 /* Pods-MoyaLogin-MoyaLoginUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
