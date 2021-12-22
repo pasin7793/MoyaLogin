@@ -11,7 +11,7 @@ import RxFlow
 struct AppStepper: Stepper{
     let steps: PublishRelay<Step> = .init()
     private let disposeBag: DisposeBag = .init()
-    let provider =
+    let provider 
     func readyToEmitSteps() {
         
     }
