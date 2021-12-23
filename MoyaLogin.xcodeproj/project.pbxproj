@@ -31,6 +31,7 @@
 		94EE994727736F29009A568A /* StepExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE994627736F29009A568A /* StepExt.swift */; };
 		94EE995127740183009A568A /* registerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE995027740183009A568A /* registerViewController.swift */; };
 		94EE99532774019D009A568A /* completeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE99522774019D009A568A /* completeViewController.swift */; };
+		94EE995627740787009A568A /* RegisterFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE995527740787009A568A /* RegisterFlow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		94EE994627736F29009A568A /* StepExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepExt.swift; sourceTree = "<group>"; };
 		94EE995027740183009A568A /* registerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registerViewController.swift; sourceTree = "<group>"; };
 		94EE99522774019D009A568A /* completeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = completeViewController.swift; sourceTree = "<group>"; };
+		94EE995527740787009A568A /* RegisterFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFlow.swift; sourceTree = "<group>"; };
 		975B3C2D7AEB5D5F67897C52 /* Pods-MoyaLogin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyaLogin.release.xcconfig"; path = "Target Support Files/Pods-MoyaLogin/Pods-MoyaLogin.release.xcconfig"; sourceTree = "<group>"; };
 		B99A19C8193E42C30AC751D1 /* Pods-MoyaLogin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyaLogin.debug.xcconfig"; path = "Target Support Files/Pods-MoyaLogin/Pods-MoyaLogin.debug.xcconfig"; sourceTree = "<group>"; };
 		BCCFC39FC79C5879DE336894 /* Pods-MoyaLogin-MoyaLoginUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyaLogin-MoyaLoginUITests.release.xcconfig"; path = "Target Support Files/Pods-MoyaLogin-MoyaLoginUITests/Pods-MoyaLogin-MoyaLoginUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -270,6 +272,7 @@
 			children = (
 				94EE9942277343D6009A568A /* AppFlow.swift */,
 				94EE993F2773410B009A568A /* Login */,
+				94EE995427740775009A568A /* Register */,
 				94EE993E27734037009A568A /* Steps */,
 			);
 			path = Flows;
@@ -337,6 +340,14 @@
 			children = (
 			);
 			path = String;
+			sourceTree = "<group>";
+		};
+		94EE995427740775009A568A /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				94EE995527740787009A568A /* RegisterFlow.swift */,
+			);
+			path = Register;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -585,6 +596,7 @@
 				94EE99312772A7E4009A568A /* SinginModel.swift in Sources */,
 				94EE994727736F29009A568A /* StepExt.swift in Sources */,
 				94EE99262771F832009A568A /* LoginAPI.swift in Sources */,
+				94EE995627740787009A568A /* RegisterFlow.swift in Sources */,
 				94EE994127734119009A568A /* LoginFlow.swift in Sources */,
 				94EE99332772A8C8009A568A /* NetworkManager.swift in Sources */,
 				94EE995127740183009A568A /* registerViewController.swift in Sources */,

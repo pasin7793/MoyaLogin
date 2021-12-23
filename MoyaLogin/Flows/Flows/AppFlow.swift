@@ -39,7 +39,6 @@ final class AppFlow: Flow{
             return coordinateToLoginVC()
         case .registerIsRequired:
             return coordinateToRegisterVC()
-            
         default:
             return .none
         }
@@ -54,7 +53,12 @@ private extension AppFlow{
         let nextStep = OneStepper(withSingleStep: SampleStep.loginIsRequired)
         return .one(flowContributor: .contribute(withNextPresentable: flow, withNextStepper: nextStep))
     }
-    func coordinateToMainVC() -> FlowContributors{
-        let flow = lo
+    func coordinateToRegisterVC() -> FlowContributors{
+        let flow = RegisterFlow(with: .init())
+        Flows.use(flow, when: .created) { [unowned self] root in
+            self.rootWindow.rootViewController = root
+        }
+        let nextStep = OneStepper(withSingleStep: SampleStep.registerIsRequired)
+        return .one(flowContributor: .contribute(withNextPresentable: flow, withNextStepper: nextStep))
     }
 }
