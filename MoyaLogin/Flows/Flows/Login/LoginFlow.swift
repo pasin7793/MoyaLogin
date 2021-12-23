@@ -11,6 +11,7 @@ import RxSwift
 import RxFlow
 import RxCocoa
 import RxRelay
+import ReactorKit
 
 
 struct LoginStepper: Stepper{
@@ -55,6 +56,7 @@ final class LoginFlow: Flow{
 }
 private extension LoginFlow{
     func coordinateToLoginVC() -> FlowContributors{
-        let reactor = login
+        let reactor = LoginReactor()
+        let vc = loginViewController(reactor: reactor)
     }
 }

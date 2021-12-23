@@ -10,12 +10,14 @@ import RxSwift
 import RxCocoa
 import Then
 import Moya
+import ReactorKit
 
-class loginViewController: UIViewController{
+//configureUI,provide, registerBtn
+
+class loginViewController: baseVC<LoginReactor>{
     
-    let disposeBag = DisposeBag()
     let viewModel = ViewModel()
-    
+    let provider = MoyaProvider<LoginAPI>()
     let bounds = UIScreen.main.bounds
 
     
@@ -40,15 +42,11 @@ class loginViewController: UIViewController{
         $0.backgroundColor = #colorLiteral(red: 0.6, green: 0.8078431373, blue: 0.9803921569, alpha: 1)
         $0.layer.cornerRadius = 15
     }
-    let provider = MoyaProvider<LoginAPI>()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .white
-        configureUI()
-        setupControl()
+    private let toRegisterBtn = UIButton().then{
+        $0.setTitle("회원가입이나 하셈 ㅋ", for: .normal)
+        $0.setTitleColor(.blue, for: .normal)
     }
-    func configureUI(){
+    override func configureUI(){
         view.addSubview(emailTextField)
         emailTextField.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
@@ -70,6 +68,11 @@ class loginViewController: UIViewController{
             make.width.equalTo(bounds.width*0.3)
             make.height.equalTo(bounds.height*0.051)
         }
+        view.addSubview(toRegisterBtn)
+        toRegisterBtn.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(loginButton).offset(bounds.height*0.35)
+        }
     }
     func setupControl(){
         let input = ViewModel.Input(email: emailTextField.rx.text.orEmpty.asObservable(),
@@ -82,7 +85,7 @@ class loginViewController: UIViewController{
             .bind(to: loginButton.rx.alpha)
             .disposed(by: disposeBag)
     }
-    func provide(){
+    override func provide(){
         setupControl()
         provider.rx.request(.signIn(SigninRequest(email: emailTextField.text ?? "",
                                                   password: passwordTextField.text ?? "")), callbackQueue: .global())
@@ -93,6 +96,11 @@ class loginViewController: UIViewController{
                 print(err.localizedDescription)
             }
             .disposed(by: disposeBag)
-
+    }
+    func registerBtn(reactor: LoginReactor){
+        registerBtn.rx.tap
+            .map { Reactor.Action.toRegisterButtonDidTap }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
     }
 }

@@ -18,10 +18,10 @@ protocol NetworkManagerType: AnyObject{
 
 final class NetworkManager: NetworkManagerType{
     func signUp(query: SignupRequest) -> Observable<Response> {
-        return provider.rx.request(.signUp(query), callbackQueue: .main).asObservable()
+        return provider.rx.request(.signUp(query), callbackQueue: .global()).asObservable()
     }
     func singIn(query: SigninRequest) -> Observable<Response> {
-        return provider.rx.request(.signIn(query), callbackQueue: .main).asObservable()
+        return provider.rx.request(.signIn(query), callbackQueue: .global()).asObservable()
     }
     var provider: MoyaProvider<LoginAPI> = .init()
     
