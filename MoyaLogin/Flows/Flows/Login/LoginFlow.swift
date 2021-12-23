@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 import RxFlow
 import RxCocoa
+import RxRelay
 
 
 struct LoginStepper: Stepper{
@@ -42,7 +43,18 @@ final class LoginFlow: Flow{
         
         switch step{
         case .loginIsRequired:
-            return 
+            return coordinateToLoginVC()
+        case .registerIsRequired:
+            return coordinateToRegisterVC()
+        case .alert(let title, let message):
+            return navigateToAlert(title: title, message: message)
+        default:
+            return .none
         }
+    }
+}
+private extension LoginFlow{
+    func coordinateToLoginVC() -> FlowContributors{
+        let reactor = login
     }
 }

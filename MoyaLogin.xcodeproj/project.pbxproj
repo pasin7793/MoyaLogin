@@ -31,7 +31,8 @@
 		94EE994727736F29009A568A /* StepExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE994627736F29009A568A /* StepExt.swift */; };
 		94EE995127740183009A568A /* registerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE995027740183009A568A /* registerViewController.swift */; };
 		94EE99532774019D009A568A /* completeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE99522774019D009A568A /* completeViewController.swift */; };
-		94EE995627740787009A568A /* RegisterFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE995527740787009A568A /* RegisterFlow.swift */; };
+		94EE995B27744022009A568A /* LoginReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE995A27744022009A568A /* LoginReactor.swift */; };
+		94EE995D27744032009A568A /* RegisterReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE995C27744032009A568A /* RegisterReactor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,7 +84,8 @@
 		94EE994627736F29009A568A /* StepExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepExt.swift; sourceTree = "<group>"; };
 		94EE995027740183009A568A /* registerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registerViewController.swift; sourceTree = "<group>"; };
 		94EE99522774019D009A568A /* completeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = completeViewController.swift; sourceTree = "<group>"; };
-		94EE995527740787009A568A /* RegisterFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFlow.swift; sourceTree = "<group>"; };
+		94EE995A27744022009A568A /* LoginReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginReactor.swift; sourceTree = "<group>"; };
+		94EE995C27744032009A568A /* RegisterReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterReactor.swift; sourceTree = "<group>"; };
 		975B3C2D7AEB5D5F67897C52 /* Pods-MoyaLogin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyaLogin.release.xcconfig"; path = "Target Support Files/Pods-MoyaLogin/Pods-MoyaLogin.release.xcconfig"; sourceTree = "<group>"; };
 		B99A19C8193E42C30AC751D1 /* Pods-MoyaLogin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyaLogin.debug.xcconfig"; path = "Target Support Files/Pods-MoyaLogin/Pods-MoyaLogin.debug.xcconfig"; sourceTree = "<group>"; };
 		BCCFC39FC79C5879DE336894 /* Pods-MoyaLogin-MoyaLoginUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyaLogin-MoyaLoginUITests.release.xcconfig"; path = "Target Support Files/Pods-MoyaLogin-MoyaLoginUITests/Pods-MoyaLogin-MoyaLoginUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -244,8 +246,8 @@
 		94EE99342772B6F7009A568A /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				94EE99352772B70F009A568A /* loginViewController.swift */,
-				94EE995027740183009A568A /* registerViewController.swift */,
+				94EE995727743FF3009A568A /* Login */,
+				94EE995827743FFC009A568A /* Register */,
 				94EE99522774019D009A568A /* completeViewController.swift */,
 			);
 			path = Main;
@@ -345,7 +347,24 @@
 		94EE995427740775009A568A /* Register */ = {
 			isa = PBXGroup;
 			children = (
-				94EE995527740787009A568A /* RegisterFlow.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		94EE995727743FF3009A568A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				94EE99352772B70F009A568A /* loginViewController.swift */,
+				94EE995A27744022009A568A /* LoginReactor.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		94EE995827743FFC009A568A /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				94EE995027740183009A568A /* registerViewController.swift */,
+				94EE995C27744032009A568A /* RegisterReactor.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -589,14 +608,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				94EE9945277369B8009A568A /* SampleStep.swift in Sources */,
+				94EE995B27744022009A568A /* LoginReactor.swift in Sources */,
 				94EE993B2772B92A009A568A /* ViewModel.swift in Sources */,
 				94EE9943277343D6009A568A /* AppFlow.swift in Sources */,
 				94EE98F02771E858009A568A /* AppDelegate.swift in Sources */,
 				94EE992927721272009A568A /* SignupRequest.swift in Sources */,
 				94EE99312772A7E4009A568A /* SinginModel.swift in Sources */,
+				94EE995D27744032009A568A /* RegisterReactor.swift in Sources */,
 				94EE994727736F29009A568A /* StepExt.swift in Sources */,
 				94EE99262771F832009A568A /* LoginAPI.swift in Sources */,
-				94EE995627740787009A568A /* RegisterFlow.swift in Sources */,
 				94EE994127734119009A568A /* LoginFlow.swift in Sources */,
 				94EE99332772A8C8009A568A /* NetworkManager.swift in Sources */,
 				94EE995127740183009A568A /* registerViewController.swift in Sources */,
