@@ -12,5 +12,5 @@ enum SampleStep: Step{
     case dismiss
     
     case loginIsRequired
-    case loginIsCompleted
+    case registerIsRequired
 }

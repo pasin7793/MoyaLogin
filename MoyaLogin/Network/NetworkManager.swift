@@ -8,7 +8,7 @@
 import RxSwift
 import Moya
 
-protocol NetworkManagerType: class{
+protocol NetworkManagerType: AnyObject{
     func signUp(query: SignupRequest) -> Observable<Response>
     
     func singIn(query: SigninRequest) -> Observable<Response>

@@ -28,6 +28,9 @@
 		94EE994127734119009A568A /* LoginFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE994027734119009A568A /* LoginFlow.swift */; };
 		94EE9943277343D6009A568A /* AppFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE9942277343D6009A568A /* AppFlow.swift */; };
 		94EE9945277369B8009A568A /* SampleStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE9944277369B8009A568A /* SampleStep.swift */; };
+		94EE994727736F29009A568A /* StepExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE994627736F29009A568A /* StepExt.swift */; };
+		94EE995127740183009A568A /* registerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE995027740183009A568A /* registerViewController.swift */; };
+		94EE99532774019D009A568A /* completeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE99522774019D009A568A /* completeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +79,9 @@
 		94EE994027734119009A568A /* LoginFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFlow.swift; sourceTree = "<group>"; };
 		94EE9942277343D6009A568A /* AppFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlow.swift; sourceTree = "<group>"; };
 		94EE9944277369B8009A568A /* SampleStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleStep.swift; sourceTree = "<group>"; };
+		94EE994627736F29009A568A /* StepExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepExt.swift; sourceTree = "<group>"; };
+		94EE995027740183009A568A /* registerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registerViewController.swift; sourceTree = "<group>"; };
+		94EE99522774019D009A568A /* completeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = completeViewController.swift; sourceTree = "<group>"; };
 		975B3C2D7AEB5D5F67897C52 /* Pods-MoyaLogin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyaLogin.release.xcconfig"; path = "Target Support Files/Pods-MoyaLogin/Pods-MoyaLogin.release.xcconfig"; sourceTree = "<group>"; };
 		B99A19C8193E42C30AC751D1 /* Pods-MoyaLogin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyaLogin.debug.xcconfig"; path = "Target Support Files/Pods-MoyaLogin/Pods-MoyaLogin.debug.xcconfig"; sourceTree = "<group>"; };
 		BCCFC39FC79C5879DE336894 /* Pods-MoyaLogin-MoyaLoginUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyaLogin-MoyaLoginUITests.release.xcconfig"; path = "Target Support Files/Pods-MoyaLogin-MoyaLoginUITests/Pods-MoyaLogin-MoyaLoginUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -157,6 +163,7 @@
 		94EE98EE2771E858009A568A /* MoyaLogin */ = {
 			isa = PBXGroup;
 			children = (
+				94EE994827736F79009A568A /* Common */,
 				94EE993C27734018009A568A /* Flows */,
 				94EE99342772B6F7009A568A /* Main */,
 				94EE992727721219009A568A /* Model */,
@@ -236,6 +243,8 @@
 			isa = PBXGroup;
 			children = (
 				94EE99352772B70F009A568A /* loginViewController.swift */,
+				94EE995027740183009A568A /* registerViewController.swift */,
+				94EE99522774019D009A568A /* completeViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -280,6 +289,54 @@
 				94EE994027734119009A568A /* LoginFlow.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		94EE994827736F79009A568A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				94EE994927736F8A009A568A /* Extensions */,
+				94EE994C27736FB6009A568A /* Swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		94EE994927736F8A009A568A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				94EE994A27736F93009A568A /* Rx */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		94EE994A27736F93009A568A /* Rx */ = {
+			isa = PBXGroup;
+			children = (
+				94EE994B27736FA2009A568A /* RxFlow */,
+			);
+			path = Rx;
+			sourceTree = "<group>";
+		};
+		94EE994B27736FA2009A568A /* RxFlow */ = {
+			isa = PBXGroup;
+			children = (
+				94EE994627736F29009A568A /* StepExt.swift */,
+			);
+			path = RxFlow;
+			sourceTree = "<group>";
+		};
+		94EE994C27736FB6009A568A /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				94EE994D27736FBF009A568A /* String */,
+			);
+			path = Swift;
+			sourceTree = "<group>";
+		};
+		94EE994D27736FBF009A568A /* String */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = String;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -526,13 +583,16 @@
 				94EE98F02771E858009A568A /* AppDelegate.swift in Sources */,
 				94EE992927721272009A568A /* SignupRequest.swift in Sources */,
 				94EE99312772A7E4009A568A /* SinginModel.swift in Sources */,
+				94EE994727736F29009A568A /* StepExt.swift in Sources */,
 				94EE99262771F832009A568A /* LoginAPI.swift in Sources */,
 				94EE994127734119009A568A /* LoginFlow.swift in Sources */,
 				94EE99332772A8C8009A568A /* NetworkManager.swift in Sources */,
+				94EE995127740183009A568A /* registerViewController.swift in Sources */,
 				94EE98F22771E858009A568A /* SceneDelegate.swift in Sources */,
 				94EE992B2772A4F8009A568A /* SingupModel.swift in Sources */,
 				94EE992F2772A7BC009A568A /* SinginRequest.swift in Sources */,
 				94EE99362772B70F009A568A /* loginViewController.swift in Sources */,
+				94EE99532774019D009A568A /* completeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

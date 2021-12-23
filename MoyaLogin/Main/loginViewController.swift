@@ -22,13 +22,15 @@ class loginViewController: UIViewController{
     private let emailTextField = UITextField().then {
         $0.placeholder = "이메일을 입력해주세요"
         $0.layer.borderWidth = 2
-        $0.layer.borderColor = UIColor.black.cgColor
+        $0.layer.borderColor = UIColor.gray.cgColor
+        $0.layer.cornerRadius = 10
     }
     private let passwordTextField = UITextField().then{
         $0.placeholder = "비밀번호를 입력해주세요"
         //$0.isSecureTextEntry = true
         $0.layer.borderWidth = 2
-        $0.layer.borderColor = UIColor.black.cgColor
+        $0.layer.borderColor = UIColor.gray.cgColor
+        $0.layer.cornerRadius = 10
     }
     
     private let loginButton = UIButton().then {
@@ -70,51 +72,27 @@ class loginViewController: UIViewController{
         }
     }
     func setupControl(){
-        emailTextField.rx.text
-            .orEmpty
-            .bind(to: viewModel.emailObserver)
-            .disposed(by: disposeBag)
+        let input = ViewModel.Input(email: emailTextField.rx.text.orEmpty.asObservable(),
+                                    password: passwordTextField.rx.text.orEmpty.asObservable())
         
-        passwordTextField.rx.text
-            .orEmpty
-            .bind(to: viewModel.passwordObserver)
-            .disposed(by: disposeBag)
+        let output = viewModel.transform(input)
         
-        viewModel.isValid
-            .bind(to: loginButton.rx.isEnabled)
-            .disposed(by: disposeBag)
-        
-        viewModel.isValid
-            .map{ $0 ? 1 : 0.3 }
+        output.isValid
+            .map { $0 ? 1.0 : 0.3}
             .bind(to: loginButton.rx.alpha)
             .disposed(by: disposeBag)
-        
-        loginButton.rx.tap
-            .subscribe( onNext: { [weak self] _ in
-                self?.provider.rx.request(.signIn(SigninRequest(email: (self?.viewModel.emailObserver.value)!, password: (self?.viewModel.passwordObserver.value)!)))
-                    .subscribe { event in
-                         switch event {
-                         case let .success(response):
-                            print(response)
-                         case let .failure(error):
-                             print(error.localizedDescription)
-                         }
-                     }
-                .disposed(by: self!.disposeBag)
-            }
-        ).disposed(by: disposeBag)
     }
     func provide(){
         setupControl()
-        provider.rx.request(.signIn(SigninRequest(email: viewModel.emailObserver.value, password: viewModel.passwordObserver.value)))
-            .subscribe { event in
-                 switch event {
-                 case let .success(response):
-                    print(response)
-                 case let .failure(error):
-                     print(error.localizedDescription)
-                 }
-             }
-        .disposed(by: disposeBag)
+        provider.rx.request(.signIn(SigninRequest(email: emailTextField.text ?? "",
+                                                  password: passwordTextField.text ?? "")), callbackQueue: .global())
+            .asObservable()
+            .subscribe { res in
+                print(try! res.map(SigninModel.self))
+            } onError: { err in
+                print(err.localizedDescription)
+            }
+            .disposed(by: disposeBag)
+
     }
 }
