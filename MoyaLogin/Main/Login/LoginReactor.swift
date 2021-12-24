@@ -16,7 +16,7 @@ final class LoginReactor: Reactor, Stepper{
     var initialState: State = .init()
     
     enum Action{
-        case updateEmail(name: String)
+        case updateEmail(email: String)
         case updatePassword(pwd: String)
         case loginButtonDidTap
         case registerButtonDidTap
@@ -63,7 +63,7 @@ extension LoginReactor{
 private extension LoginReactor{
     func login() -> Observable<Mutation>{
         let user = SigninRequest(email: currentState.email, password: currentState.password)
-        NetworkManager.shared.singIn(query: user)
+        NetworkManager.shared.singIn(user: SigninRequest(email: user.email, password: user.password))
             .asObservable()
             .subscribe(onNext: { [weak self] res in
                 switch res.statusCode{

@@ -45,10 +45,10 @@ final class LoginFlow: Flow{
         switch step{
         case .loginIsRequired:
             return coordinateToLoginVC()
-        case .registerIsRequired:
+        /*case .registerIsRequired:
             return coordinateToRegisterVC()
         case .alert(let title, let message):
-            return navigateToAlert(title: title, message: message)
+            return navigateToAlert(title: title, message: message)*/
         default:
             return .none
         }
@@ -58,5 +58,13 @@ private extension LoginFlow{
     func coordinateToLoginVC() -> FlowContributors{
         let reactor = LoginReactor()
         let vc = loginViewController(reactor: reactor)
+        self.rootVC.pushViewController(vc, animated: true)
+        return .one(flowContributor: .contribute(withNextPresentable: vc, withNextStepper: reactor))
     }
+    
+    /*func coordinateToRegisterVC() -> FlowContributors{
+        let reactor = RegisterReactor()
+        let vc = registerViewController(reactor: reactor)
+        
+    }*/
 }

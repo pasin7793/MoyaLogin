@@ -18,10 +18,26 @@ class baseVC<T: Reactor>: UIViewController{
         view.backgroundColor = .white
         configureUI()
         provide()
-        toRegisterBtn()
+    }
+    init(reactor: T){
+        super.init(nibName: nil, bundle: nil)
+        self.reactor = reactor
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    deinit{
+        print("\(type(of: self)): \(#function)")
     }
     
     func configureUI() {}
     func provide() {}
-    func toRegisterBtn() {}
+    
+    func bindView(reactor: T) {}
+}
+extension baseVC: View{
+    func bind(reactor: T) {
+        bindView(reactor: reactor)
+    }
 }

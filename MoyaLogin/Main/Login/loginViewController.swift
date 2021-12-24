@@ -79,7 +79,6 @@ class loginViewController: baseVC<LoginReactor>{
                                     password: passwordTextField.rx.text.orEmpty.asObservable())
         
         let output = viewModel.transform(input)
-        
         output.isValid
             .map { $0 ? 1.0 : 0.3}
             .bind(to: loginButton.rx.alpha)
@@ -87,19 +86,18 @@ class loginViewController: baseVC<LoginReactor>{
     }
     override func provide(){
         setupControl()
-        provider.rx.request(.signIn(SigninRequest(email: emailTextField.text ?? "",
-                                                  password: passwordTextField.text ?? "")), callbackQueue: .global())
+        provider.rx.request(.requiredLogin(user: SigninRequest(email: emailTextField.text ?? "", password: passwordTextField.text ?? "")), callbackQueue: .global())
             .asObservable()
             .subscribe { res in
-                print(try! res.map(SigninModel.self))
+                print(try! res.mapJSON())
             } onError: { err in
                 print(err.localizedDescription)
             }
             .disposed(by: disposeBag)
     }
-    func registerBtn(reactor: LoginReactor){
-        registerBtn.rx.tap
-            .map { Reactor.Action.toRegisterButtonDidTap }
+    override func bindView(reactor: LoginReactor){
+        toRegisterBtn.rx.tap
+            .map { Reactor.Action.registerButtonDidTap }
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
     }

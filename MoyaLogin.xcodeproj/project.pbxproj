@@ -10,6 +10,7 @@
 		1987EB2B36EE084878E65FE1 /* Pods_MoyaLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F4DBE0FCCCEF2E999BD0DF0 /* Pods_MoyaLogin.framework */; };
 		1CE6A41CD43342D25021DBEF /* Pods_MoyaLoginTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60037E6C183335F7AD6FA0C8 /* Pods_MoyaLoginTests.framework */; };
 		5114FB980213F4BE4DA6D087 /* Pods_MoyaLogin_MoyaLoginUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30DCA2A57C7E8F7BD73C2F3E /* Pods_MoyaLogin_MoyaLoginUITests.framework */; };
+		94426550277565FC00421A2C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9442654F277565FC00421A2C /* User.swift */; };
 		94EE98F02771E858009A568A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE98EF2771E858009A568A /* AppDelegate.swift */; };
 		94EE98F22771E858009A568A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE98F12771E858009A568A /* SceneDelegate.swift */; };
 		94EE98F92771E859009A568A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94EE98F82771E859009A568A /* Assets.xcassets */; };
@@ -18,10 +19,6 @@
 		94EE99112771E859009A568A /* MoyaLoginUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE99102771E859009A568A /* MoyaLoginUITests.swift */; };
 		94EE99132771E859009A568A /* MoyaLoginUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE99122771E859009A568A /* MoyaLoginUITestsLaunchTests.swift */; };
 		94EE99262771F832009A568A /* LoginAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE99252771F832009A568A /* LoginAPI.swift */; };
-		94EE992927721272009A568A /* SignupRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE992827721272009A568A /* SignupRequest.swift */; };
-		94EE992B2772A4F8009A568A /* SingupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE992A2772A4F8009A568A /* SingupModel.swift */; };
-		94EE992F2772A7BC009A568A /* SinginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE992E2772A7BC009A568A /* SinginRequest.swift */; };
-		94EE99312772A7E4009A568A /* SinginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE99302772A7E4009A568A /* SinginModel.swift */; };
 		94EE99332772A8C8009A568A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE99322772A8C8009A568A /* NetworkManager.swift */; };
 		94EE99362772B70F009A568A /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE99352772B70F009A568A /* loginViewController.swift */; };
 		94EE993B2772B92A009A568A /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE993A2772B92A009A568A /* ViewModel.swift */; };
@@ -60,6 +57,7 @@
 		6F4DBE0FCCCEF2E999BD0DF0 /* Pods_MoyaLogin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoyaLogin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8051596CE3C420BBC01CAF99 /* Pods-MoyaLogin-MoyaLoginUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyaLogin-MoyaLoginUITests.debug.xcconfig"; path = "Target Support Files/Pods-MoyaLogin-MoyaLoginUITests/Pods-MoyaLogin-MoyaLoginUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8245AAAEC0EE31BA52B89BA8 /* Pods-MoyaLoginTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyaLoginTests.release.xcconfig"; path = "Target Support Files/Pods-MoyaLoginTests/Pods-MoyaLoginTests.release.xcconfig"; sourceTree = "<group>"; };
+		9442654F277565FC00421A2C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		94EE98EC2771E858009A568A /* MoyaLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoyaLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94EE98EF2771E858009A568A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94EE98F12771E858009A568A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,10 +70,6 @@
 		94EE99102771E859009A568A /* MoyaLoginUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaLoginUITests.swift; sourceTree = "<group>"; };
 		94EE99122771E859009A568A /* MoyaLoginUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaLoginUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		94EE99252771F832009A568A /* LoginAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAPI.swift; sourceTree = "<group>"; };
-		94EE992827721272009A568A /* SignupRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupRequest.swift; sourceTree = "<group>"; };
-		94EE992A2772A4F8009A568A /* SingupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingupModel.swift; sourceTree = "<group>"; };
-		94EE992E2772A7BC009A568A /* SinginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinginRequest.swift; sourceTree = "<group>"; };
-		94EE99302772A7E4009A568A /* SinginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinginModel.swift; sourceTree = "<group>"; };
 		94EE99322772A8C8009A568A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		94EE99352772B70F009A568A /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
 		94EE993A2772B92A009A568A /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
@@ -221,28 +215,9 @@
 		94EE992727721219009A568A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				94EE992D2772A7A6009A568A /* Singin */,
-				94EE992C2772A797009A568A /* Singup */,
+				94EE99622774BA5B009A568A /* User */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		94EE992C2772A797009A568A /* Singup */ = {
-			isa = PBXGroup;
-			children = (
-				94EE992827721272009A568A /* SignupRequest.swift */,
-				94EE992A2772A4F8009A568A /* SingupModel.swift */,
-			);
-			path = Singup;
-			sourceTree = "<group>";
-		};
-		94EE992D2772A7A6009A568A /* Singin */ = {
-			isa = PBXGroup;
-			children = (
-				94EE992E2772A7BC009A568A /* SinginRequest.swift */,
-				94EE99302772A7E4009A568A /* SinginModel.swift */,
-			);
-			path = Singin;
 			sourceTree = "<group>";
 		};
 		94EE99342772B6F7009A568A /* Main */ = {
@@ -386,6 +361,14 @@
 				94EE996027745EF3009A568A /* baseVC.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		94EE99622774BA5B009A568A /* User */ = {
+			isa = PBXGroup;
+			children = (
+				9442654F277565FC00421A2C /* User.swift */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -632,8 +615,6 @@
 				94EE993B2772B92A009A568A /* ViewModel.swift in Sources */,
 				94EE9943277343D6009A568A /* AppFlow.swift in Sources */,
 				94EE98F02771E858009A568A /* AppDelegate.swift in Sources */,
-				94EE992927721272009A568A /* SignupRequest.swift in Sources */,
-				94EE99312772A7E4009A568A /* SinginModel.swift in Sources */,
 				94EE995D27744032009A568A /* RegisterReactor.swift in Sources */,
 				94EE994727736F29009A568A /* StepExt.swift in Sources */,
 				94EE99262771F832009A568A /* LoginAPI.swift in Sources */,
@@ -641,8 +622,7 @@
 				94EE99332772A8C8009A568A /* NetworkManager.swift in Sources */,
 				94EE995127740183009A568A /* registerViewController.swift in Sources */,
 				94EE98F22771E858009A568A /* SceneDelegate.swift in Sources */,
-				94EE992B2772A4F8009A568A /* SingupModel.swift in Sources */,
-				94EE992F2772A7BC009A568A /* SinginRequest.swift in Sources */,
+				94426550277565FC00421A2C /* User.swift in Sources */,
 				94EE99362772B70F009A568A /* loginViewController.swift in Sources */,
 				94EE99532774019D009A568A /* completeViewController.swift in Sources */,
 			);
@@ -816,6 +796,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZW43FFWC7M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MoyaLogin/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -843,6 +824,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZW43FFWC7M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MoyaLogin/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

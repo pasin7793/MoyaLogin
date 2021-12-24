@@ -9,20 +9,21 @@ import RxSwift
 import Moya
 
 protocol NetworkManagerType: AnyObject{
-    func signUp(query: SignupRequest) -> Observable<Response>
-    
-    func singIn(query: SigninRequest) -> Observable<Response>
+    func signUp(user: SignupRequest) -> Single<Response>
+    func singIn(user: SigninRequest) -> Single<Response>
     
     var provider: MoyaProvider<LoginAPI> { get }
 }
 
 final class NetworkManager: NetworkManagerType{
-    func signUp(query: SignupRequest) -> Observable<Response> {
-        return provider.rx.request(.signUp(query), callbackQueue: .global()).asObservable()
+    func signUp(user: SignupRequest) -> Single<Response> {
+        return provider.rx.request(.requiredRegister(user: user), callbackQueue: .global())
     }
-    func singIn(query: SigninRequest) -> Observable<Response> {
-        return provider.rx.request(.signIn(query), callbackQueue: .global()).asObservable()
+    
+    func singIn(user: SigninRequest) -> Single<Response> {
+        return provider.rx.request(.requiredLogin(user: user), callbackQueue: .global())
     }
+    
     var provider: MoyaProvider<LoginAPI> = .init()
     
     static let shared = NetworkManager()
