@@ -20,7 +20,6 @@ class loginViewController: baseVC<LoginReactor>{
     let provider = MoyaProvider<LoginAPI>()
     let bounds = UIScreen.main.bounds
 
-    
     private let emailTextField = UITextField().then {
         $0.placeholder = "이메일을 입력해주세요"
         $0.layer.borderWidth = 2
